@@ -1,0 +1,14 @@
+<div class="main row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let index of list">
+        <div class="card">
+            <img src="{{ index.img }}" class="card-img-top" (click)="redirect(index)" alt="thumbnail" />
+            <div class="card-body">
+                <h6 class="card-title">{{ index.title }}</h6>
+                <p class="card-subtitle">{{ index.subtitle }} ♪</p>
+                <p class="card-subtitle">
+                    {{ index.views }} views • {{ index.time }} ago
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

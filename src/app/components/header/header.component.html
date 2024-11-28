@@ -1,0 +1,94 @@
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<div class="header">
+    <div class="menubar">
+        <span class="menu material-symbols-outlined navbar-toggler" data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternalContent" (click)="this.collapse=!this.collapse;">
+            menu
+        </span>
+
+        <img src="./assets/logo.png" alt="Youtube" class="logo">
+    </div>
+
+    <div class="search">
+        <input type="text" placeholder="Search" class="text-white" [(ngModel)]="searchQuery" (input)="filterItems()">
+
+        <span class="search-btn material-symbols-outlined">
+            search
+        </span>
+
+        <!-- Popup de resultados -->
+        <div class="popup" *ngIf="filteredItems.length > 0 && query != '' ">
+            <ul>
+                <li *ngFor="let item of filteredItems" (click)="goToLink(item.link)">
+                <span class="clickable-title" (click)="goToLink(item.link)">
+                    {{ item.title }}
+                </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mobile-search-container hidden">
+        <input type="text" placeholder="Search">
+        <span class="search-btn material-symbols-outlined">search</span>
+    </div>
+    <div class="options">
+        <app-logout></app-logout>
+
+    </div>
+
+</div>
+
+<div class="nav">
+
+    <div class="drop-nav">
+        <div class="content" *ngIf="!collapse">
+            <app-navbar></app-navbar>
+        </div>
+
+        <div class="collapse" *ngIf="collapse" style="height: 0;" id="navbarToggleExternalContent">
+            <div class="home">
+                <span class="material-symbols-outlined">
+                    home
+                </span>
+                <p>Home</p>
+            </div>
+
+            <div>
+                <span class="material-symbols-outlined">
+                    bolt
+                </span>
+                <p>Shorts</p>
+            </div>
+
+            <div>
+                <span class="material-symbols-outlined">
+                    subscriptions
+                </span>
+                <p>Subscriptions</p>
+            </div>
+
+            <div>
+                <span class="material-symbols-outlined">
+                    video_library
+                </span>
+                <p>Library</p>
+            </div>
+
+            <div>
+                <span class="material-symbols-outlined">
+                    history
+                </span>
+                <p>History</p>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+<div [style]="!collapse ? 'margin-left: 250px;':'margin-left: 100px;'">
+    <app-main></app-main>
+</div>

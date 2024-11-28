@@ -1,0 +1,57 @@
+.material-symbols-outlined {
+    cursor: pointer;
+    color: white;
+}
+
+.active .material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+.side-nav {
+    height: max-content;
+    width: 250px;
+    padding: 15px;
+    background-color: rgb(14, 14, 14);
+    color: white;
+}
+
+.btn {
+    font-size: 14px;
+    font-weight: 500;
+    background-color: rgb(14, 14, 14);
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 2px 0px;
+    width: 210px;
+}
+
+.btn:hover {
+    background-color: #343333;
+}
+
+.active {
+    background-color: #282525;
+}
+
+p {
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sign-btn {
+    span{
+        padding: 4px 0px;
+    }
+
+    .sign {
+        color: rgb(63, 162, 255);
+    }
+
+    margin-left: 15px;
+}
