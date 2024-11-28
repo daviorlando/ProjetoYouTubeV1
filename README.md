@@ -8,6 +8,7 @@ Este repositório do GitHub contém um clone da interface da página inicial do 
 - Layout da página inicial semelhante à interface do YouTube.
 - Dados simulados usando JSON-Server para preencher a lista de vídeos e interações dos usuários.
 - Design responsivo com Bootstrap para uma experiência consistente em diferentes dispositivos.
+- Autenticação de cada usuário na plataforma.
 
 ## Tecnologias Utilizadas
 
